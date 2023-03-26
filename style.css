@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* ### Primary */
+
+--Emerald:hsl(159, 35%, 19%);
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+    /* ### Neutral */
+
+ --Very-dark-blue: hsl(212, 21%, 14%);
+ --Dark-grayish-blue: hsl(228, 12%, 48%);
+ --White: hsl(0, 0%, 100%);
+
+    /* FONT FAMILY */
+
+ --fontMon: 'Montserrat', sans-serif;
+ --fontFran: 'Fraunces', serif;
+
+}
+
+body{
+    /* width: 100vw; */
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THE CARD, SPLITTING IT'S CONTENT  */
+
+.container{
+    width: 30rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--White);
+}
+.img{
+    width: 50%;
+    border-radius: 7px 0 0 7px;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.card-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 1rem  1.5rem;
+}
+
+/* TEXT IN CONTENT STYLED */
+
+.heading{
+    font-family: var(--fontMon);
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+.info h2{
+    font-family: var(--fontFran);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 1rem 1rem 0;
+}
+.info p{
+    font-family: var(--fontMon);
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin: 0 0.6rem 0 0;
+    line-height: 1rem;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2rem;
+}
+.price h2{
+    font-family: var(--fontFran);
+    font-weight: 700;
+    margin: 0 1rem 0 0;
+    color: var(--Dark-cyan);
+}
+.price p{
+    text-decoration-line: line-through;
+    font-family: var(--fontMon);
+    font-size: 0.7rem;
+    color: var(--Dark-grayish-blue);
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontMon);
+    font-weight: 500;
+    font-size: 0.7rem;
+    padding: 0.7rem;
+    border: hidden;
+    border-radius: 0.3rem;
+    background-color: var(--Emerald);
+    color: var(--White);
+    cursor: pointer;
+    transition: all 0.5s;       
+}
+.button:hover {
+    background-color: var(--Dark-cyan);
+    color: var(--Emerald);
+}
+
+
+.button a{
+  padding: 0 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.button img{
+    width: 0.8rem;
+    height: auto;
+}
+@media screen and (max-width: 440px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .container{
+        width: 80%;
+        height: 70%;
+        flex-direction: column;
+    }
+    .img{
+        width: auto;
+        height: 45%;
+        border-radius: 7px 7px 0 0;
+        overflow: hidden;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .card-description{
+        height: 55%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;     
+    }
+    .info p{
+        font-family: var(--fontMon);
+        color: var(--Dark-grayish-blue);
+        font-weight: 500;
+        font-size: 0.83rem;
+        line-height: 1rem;
+    }
+    .button{
+        background-color: var(--Dark-cyan);
+        margin: 0.6rem 0 0 0;
+        cursor: pointer;
+        transition: 2s;
+    }
+    .button:hover{
+        background-color: var(--Emerald);
+    }
+}

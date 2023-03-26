@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Aanu-TT/2_product-preview-card-component-main/blob/main/style.css)
 - Live Site URL: [Add live site URL here](https://2-product-preview-card-component-main.vercel.app/)
 
 ## My process
